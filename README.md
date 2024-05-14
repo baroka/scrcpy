@@ -9,6 +9,7 @@ PREREQUISITES
    . Enable TCP/IP debug. Run on shell: adb tcpip 5555
    . Install Clipper: https://github.com/majido/clipper
    . Install FortiTokenMobile
+   . Unlock screen by dragging up
 
 INSTALLATION
  - Docker compose example: 
