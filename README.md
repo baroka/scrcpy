@@ -10,6 +10,7 @@ PREREQUISITES
    . Install Clipper: https://github.com/majido/clipper
    . Install FortiTokenMobile
    . Unlock screen by dragging up
+   . Starting with Android 11 there's ADB Authorization Timeout. By default this is set to 7 days. There is an option in developer options to permanently disable this functionality. 
 
 INSTALLATION
  - Docker compose example: 
