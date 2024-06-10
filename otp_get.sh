@@ -9,8 +9,8 @@ package=com.fortinet.android.ftm
 adb shell am start $package/$(adb shell cmd package resolve-activity -c android.intent.category.LAUNCHER $package | sed -n '/name=/s/^.*name=//p')
 
 # Unlock screen
-#adb shell input keyevent 26
-#adb shell input touchscreen swipe 600 780 600 380
+adb shell input keyevent 26
+adb shell input touchscreen swipe 600 780 600 380
 
 # Unhide OTP
 adb shell input tap 719 345
