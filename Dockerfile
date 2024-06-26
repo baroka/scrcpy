@@ -6,7 +6,8 @@ FROM ubuntu:latest
 WORKDIR /scrcpy
 
 # Install packages
-RUN apt-get update && apt-get install -y scrcpy && \
+RUN apt-get update && apt-get install -y scrcpy \
+    iputils-ping && \
     apt-get clean
 
 # Timezone (no prompt)
