@@ -2,14 +2,21 @@
 # Script for get FortiTokenMobile OTP
 
 # Check available device
+found=''
 IFS=','; for DEVICE in $DEVICES; do 
   if ping -c 1 -W 1 "$DEVICE"; then
     echo "$DEVICE is alive"
+    found='OK'
     break
   else
     echo "$DEVICE is not alive"
   fi
 done
+if [[ "$found" != "OK" ]]
+then
+	echo "No device available"
+	exit 1
+fi
 
 # Connect to device
 adb connect $DEVICE:$PORT
