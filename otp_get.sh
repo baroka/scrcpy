@@ -12,8 +12,7 @@ IFS=','; for DEVICE in $DEVICES; do
     echo "$DEVICE is not alive"
   fi
 done
-if [[ "$found" != "OK" ]]
-then
+if [ -z "$found" ]; then
 	echo "No device available"
 	exit 1
 fi
